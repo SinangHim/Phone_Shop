@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="210dp"
@@ -23,16 +24,27 @@
 
             <TextView
                 android:id="@+id/textName"
-                android:layout_width="285dp"
+                android:layout_width="294dp"
                 android:layout_height="match_parent"
-                android:text="Brand Name" />
+                android:background="@color/color_background_text"
+                android:gravity="start"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/Brand_Name"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textPrice"
                 android:layout_width="92dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:text="Price" />
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/color_text_red"
+                android:textSize="25sp"
+                android:text="@string/Price" />
 
         </FrameLayout>
 
