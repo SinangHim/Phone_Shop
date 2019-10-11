@@ -1,5 +1,4 @@
 package com.example.phoneshop
-
 class Phone  (
 
     var id: Int,
