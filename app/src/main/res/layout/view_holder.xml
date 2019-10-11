@@ -3,11 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:orientation="vertical"
-        >
+
 
 
         <com.facebook.drawee.view.SimpleDraweeView
@@ -47,7 +43,5 @@
                 android:text="@string/Price" />
 
         </FrameLayout>
-
-    </LinearLayout>
 
 </RelativeLayout>
