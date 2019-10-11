@@ -4,13 +4,14 @@
     android:layout_height="270dp"
     android:padding="10dp">
 
-        <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/imgPhone"
-            android:layout_width="match_parent"
-            android:layout_height="270dp"
-            android:src="@drawable/ic_arrow_key"/>
-           app:actualImageScaleType="fitCenter"
-           app:placeholderImage="@drawable/img_default_image"
+    app:actualImageScaleType="fitCenter"
+    app:placeholderImage="@drawable/img_default_image"
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imgPhone"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:src="@drawable/ic_arrow_key" />
 
     <FrameLayout
         android:layout_width="396dp"
