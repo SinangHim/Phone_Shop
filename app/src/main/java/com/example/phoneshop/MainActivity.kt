@@ -1,5 +1,6 @@
 package com.example.phoneshop
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,10 +19,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         recyclerView.layoutManager = LinearLayoutManager1(this)
 
         adapter = PhoneAdapter()
         recyclerView.adapter = adapter
+
+        textAll.setOnClickListener {
+            val intent = Intent(this,NewActivity::class.java)
+            startActivity(intent)
+        }
 
         loadphonesFromServer()
 
