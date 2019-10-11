@@ -28,30 +28,30 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-     fun loadphonesFromServer() {
-         val url = "http://lp.js-cambodia.com/rupp/phones.php"
-         val request = JsonArrayRequest(url, Response.Listener
-         {
-             val phones = arrayListOf<Phone>()
-             for(i in 0 until it.length()){
-                 val phoneJson = it.getJSONObject(i)
-                 val id = phoneJson.getInt("id")
-                 val name = phoneJson.getString("name")
-                 val price = phoneJson.getInt("price")
-                 val brandId = phoneJson.getInt("brandId")
-                 val imageUrl = phoneJson.getString("imageUrl")
+    fun loadphonesFromServer() {
+        val url = "http://lp.js-cambodia.com/rupp/phones.php"
+        val request = JsonArrayRequest(url, Response.Listener
+        {
+            val phones = arrayListOf<Phone>()
+            for(i in 0 until it.length()){
+                val phoneJson = it.getJSONObject(i)
+                val id = phoneJson.getInt("id")
+                val name = phoneJson.getString("name")
+                val price = phoneJson.getInt("price")
+                val brandId = phoneJson.getInt("brandId")
+                val imageUrl = phoneJson.getString("imageUrl")
 
-                 val phone = Phone(id,name,price,brandId, imageUrl)
-                 phones.add(phone)
-             } // end for
-             adapter.phones = phones
-             adapter.notifyDataSetChanged()
-         },
-             Response.ErrorListener
-             {
-                 Toast.makeText(this, "Could not fetch data please try again..",Toast.LENGTH_LONG).show()
-                 Log.d("FE", "Could not Fetch data error:" + it.message)
-             }) // end val request
-         Volley.newRequestQueue(this).add(request)
-     }
+                val phone = Phone(id,name,price,brandId, imageUrl)
+                phones.add(phone)
+            } // end for
+            adapter.phones = phones
+            adapter.notifyDataSetChanged()
+        },
+            Response.ErrorListener
+            {
+                Toast.makeText(this, "Could not fetch data please try again..",Toast.LENGTH_LONG).show()
+                Log.d("FE", "Could not Fetch data error:" + it.message)
+            }) // end val request
+        Volley.newRequestQueue(this).add(request)
+    }
 }
