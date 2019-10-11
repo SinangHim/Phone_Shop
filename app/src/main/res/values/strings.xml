@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Phone Shop</string>
+    <string name="Price">1399$</string>
+    <string name="Brand_Name">IPhone 11 pro max</string>
 </resources>
