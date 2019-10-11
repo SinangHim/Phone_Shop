@@ -52,6 +52,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Could not fetch data please try again..",Toast.LENGTH_LONG).show()
                 Log.d("FE", "Could not Fetch data error:" + it.message)
             }) // end val request
-        Volley.newRequestQueue(this).
+        Volley.newRequestQueue(this).add(request)
     }
 }
